@@ -10,7 +10,7 @@
   --bg-color: ;
   --inner-bg-color: ;
   --text-color: ;
-  --checkbox-color: ;
+  --checkbox-color: #ffffff;
   --hover-color: ;
 }
 
@@ -43,7 +43,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 header img {
@@ -55,13 +55,11 @@ header img {
 nav {
   background-color: blue;
   padding: 2rem 1rem;
-  font-size: 1.25rem;
 }
 
 main {
   background-color: green;
   padding: 2rem 5rem;
-  font-size: 1.25rem;
 }
 
 .container > *:not(header) h1 {
