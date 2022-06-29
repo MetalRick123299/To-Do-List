@@ -10,27 +10,39 @@
     <title>To-Do-List</title>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div id="logo">
-          <!-- Hamburger Icon HTML -->
-          <div id="hamburgerIcon">
-            <input id="toggle" type="checkbox" />
-            <label for="toggle" class="hamburger">
-              <div class="top-bun"></div>
-              <div class="meat"></div>
-              <div class="bottom-bun"></div>
-            </label>
-          </div>
-          <!-- Hamburger Icon HTML -->
-          <h1>To-Do-List</h1>
-        </div>
-        <div id="Login">
-          <button>Login</button>
-        </div>
-      </header>
+    <header>
+      <div id="logo">
+        <!-- Hamburger Icon HTML -->
+        <div id="hamburgerIcon">
+          <input id="toggle" type="checkbox" oninput="navToggle()" checked />
+          <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+          </label>
 
-      <nav>
+          <script defer>
+            function navToggle() {
+              const toggle = document.querySelector("#toggle");
+              const nav = document.querySelector("nav");
+
+              if (nav.classList.contains("toggle")) {
+                nav.classList.remove("toggle");
+              } else {
+                nav.classList.add("toggle");
+              }
+            }
+          </script>
+        </div>
+        <!-- Hamburger Icon HTML -->
+        <h1>To-Do-List</h1>
+      </div>
+      <div id="Login">
+        <button>Login</button>
+      </div>
+    </header>
+    <div class="container">
+      <nav class="toggle">
         <h1>Home</h1>
       </nav>
 
