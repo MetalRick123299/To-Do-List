@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 *,
 *::before,
 *::after {
@@ -20,7 +21,30 @@ body {
   color: white;
 }
 
+h1,
+h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 48px;
+}
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
 .container {
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
   height: var(--height);
   width: 100vw;
 
@@ -61,16 +85,30 @@ nav {
   width: 325px;
   background-color: blue;
   padding: 2rem 1rem;
+  transform: translateX(-325px);
+  transition: all 0.4s ease-in;
+}
+nav.toggle {
+  transform: translateX(0px);
+  transition: all 0.4s ease-in;
 }
 
 main {
   width: 100vw;
+  /* background-color: white; */
+  transition: all 0.4s ease-in;
+}
+main.toggle {
   margin-left: 325px;
-  background-color: green;
-  padding: 2rem 4rem;
+  transition: all 0.4s ease-in;
 }
 
-.container > *:not(header) h1 {
+.container > *:not(header) h1,
+h2 {
   background-color: gray;
   padding: 0.5rem 1rem;
+}
+
+#toDoList {
+  height: 78.5vh;
 }
