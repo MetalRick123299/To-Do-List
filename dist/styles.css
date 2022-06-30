@@ -106,7 +106,10 @@ nav.toggle {
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
-  /* border-bottom: 3px solid; */
+}
+
+.navSection:not(.noCursor) {
+  cursor: pointer;
 }
 
 .navSection img {
@@ -156,9 +159,51 @@ h2 {
   clip-path: circle(46% at 50% 50%);
 
   align-self: center;
+
+  cursor: pointer;
 }
 
 .todo img {
   height: 35px;
   width: 35px;
+
+  cursor: pointer;
+}
+
+#projectContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  cursor: pointer;
+}
+
+.todoNum {
+  height: 40px;
+  width: 40px;
+
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 33%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  border-radius: 50%;
+}
+
+#addTodo {
+  cursor: pointer;
 }

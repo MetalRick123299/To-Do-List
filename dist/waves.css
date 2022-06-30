@@ -1,9 +1,8 @@
 :root {
-  --wave-color: white;
-  --wave-color-1: var(--wave-color);
-  --wave-color-2: var(--wave-color);
-  --wave-color-3: var(--wave-color);
-  --wave-color-4: var(--wave-color);
+  --wave-color-4: rgba(84, 58, 183, 1);
+  --wave-color-3: rgba(0, 172, 193, 1);
+  --wave-color-2: rgba(0, 172, 193, 1);
+  --wave-color-1: rgba(84, 58, 183, 1);
 }
 
 .waveWrapper {
