@@ -80,7 +80,6 @@ header img {
 }
 
 nav {
-  position: fixed;
   height: var(--height);
   width: 325px;
   background-color: blue;
@@ -95,10 +94,11 @@ nav.toggle {
 
 main {
   width: 100vw;
+  margin-left: -325px;
   transition: all 0.4s ease-in;
 }
 main.toggle {
-  margin-left: 325px;
+  margin-left: 0;
   transition: all 0.4s ease-in;
 }
 
