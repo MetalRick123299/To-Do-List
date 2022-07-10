@@ -11,6 +11,11 @@
     <title>To-Do-List</title>
   </head>
   <body>
+    <div class="overlay" onclick="remove()"></div>
+    <div class="addPopUp">
+      <!-- Create The addPopUp Card -->
+    </div>
+    <div class="editPopUp"></div>
     <header>
       <div id="logo">
         <!-- Hamburger Icon HTML -->
@@ -40,7 +45,28 @@
         </div>
         <!-- Hamburger Icon HTML -->
         <h1>To-Do-List</h1>
-        <img id="addTodo" src="./images/Plus-Sign.svg" alt="Add Todo">
+        <img
+          onclick="addTodo()"
+          id="addTodo"
+          src="./images/Plus-Sign.svg"
+          alt="Add Todo"
+        />
+        <script defer>
+          function addTodo() {
+            const overlay = document.querySelector(".overlay");
+            const addPopUp = document.querySelector(".addPopUp");
+            overlay.classList.add("active");
+            addPopUp.classList.add("active");
+          }
+          function remove() {
+            const overlay = document.querySelector(".overlay");
+            const addPopUp = document.querySelector(".addPopUp");
+            const editPopUp = document.querySelector(".editPopUp");
+            overlay.classList.remove("active");
+            addPopUp.classList.remove("active");
+            editPopUp.classList.remove("active");
+          }
+        </script>
       </div>
       <div id="Login">
         <button>Login</button>
@@ -49,20 +75,20 @@
     <div class="container">
       <nav class="toggle">
         <div class="navSection">
-          <img src="./images/inbox-arrow-down.svg" alt="Inbox">
+          <img src="./images/inbox-arrow-down.svg" alt="Inbox" />
           <h2>Inbox</h2>
         </div>
         <div class="navSection">
-          <img src="./images/calendar-today.svg" alt="Today">
+          <img src="./images/calendar-today.svg" alt="Today" />
           <h2>Today</h2>
         </div>
         <div class="navSection">
-          <img src="./images/calendar-week.svg" alt="Week">
+          <img src="./images/calendar-week.svg" alt="Week" />
           <h2>This Week</h2>
         </div>
-        
+
         <div class="navSection noCursor">
-          <img src="./images/text-box-multiple-outline.svg" alt="Projects">
+          <img src="./images/text-box-multiple-outline.svg" alt="Projects" />
           <h2>Projects</h2>
         </div>
         <div id="projectContainer">
@@ -83,38 +109,56 @@
             <h3>ProjectName</h3>
           </div>
         </div>
-
       </nav>
 
       <main id="main" class="toggle">
-        <h1 >Current Tab Name</h1>
+        <h1>Current Tab Name</h1>
         <div class="content">
           <div class="todo">
-            <input type="checkbox">
+            <input type="checkbox" />
             <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img src="./images/edit-outline.svg" alt="edit">
-            <img src="./images/close-thick.svg" alt="remove">
+            <img
+              src="./images/edit-outline.svg"
+              alt="edit"
+              onclick="editPopUp()"
+            />
+            <img src="./images/close-thick.svg" alt="remove" />
           </div>
           <div class="todo">
-            <input type="checkbox">
+            <input type="checkbox" />
             <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img src="./images/edit-outline.svg" alt="edit">
-            <img src="./images/close-thick.svg" alt="remove">
+            <img
+              src="./images/edit-outline.svg"
+              alt="edit"
+              onclick="editPopUp()"
+            />
+            <img src="./images/close-thick.svg" alt="remove" />
           </div>
           <div class="todo">
-            <input type="checkbox">
+            <input type="checkbox" />
             <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img src="./images/edit-outline.svg" alt="edit">
-            <img src="./images/close-thick.svg" alt="remove">
+            <img
+              src="./images/edit-outline.svg"
+              alt="edit"
+              onclick="editPopUp()"
+            />
+            <img src="./images/close-thick.svg" alt="remove" />
           </div>
         </div>
-        </div>
+        <script defer>
+          function editPopUp() {
+            const overlay = document.querySelector(".overlay");
+            const editPopUp = document.querySelector(".editPopUp");
+            overlay.classList.add("active");
+            editPopUp.classList.add("active");
+          }
+        </script>
       </main>
     </div>
     <div id="waves">
