@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./hamburger.css" />
     <link rel="stylesheet" href="./waves.css" />
-    <script src="./main.js" defer></script>
     <title>To-Do-List</title>
+    <script src="./main.js" defer></script>
   </head>
   <body>
-    <div class="overlay" onclick="remove()"></div>
+    <div class="overlay" onclick="removeOverlay()"></div>
     <div class="addPopUp">
-      <!-- Create The addPopUp Card -->
+      <!-- Create addPopUp Card -->
     </div>
-    <div class="editPopUp"></div>
+    <div class="editPopUp">
+      <!-- Create editPopUp Card -->
+    </div>
     <header>
       <div id="logo">
         <!-- Hamburger Icon HTML -->
@@ -58,7 +60,7 @@
             overlay.classList.add("active");
             addPopUp.classList.add("active");
           }
-          function remove() {
+          function removeOverlay() {
             const overlay = document.querySelector(".overlay");
             const addPopUp = document.querySelector(".addPopUp");
             const editPopUp = document.querySelector(".editPopUp");
@@ -116,7 +118,9 @@
         <div class="content">
           <div class="todo">
             <input type="checkbox" />
-            <h3 class="todoName">Put all item away in theier container</h3>
+            <h3 class="todoName" onclick="detailPopUp()">
+              Put all item away in theier container
+            </h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
             <img
