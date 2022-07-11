@@ -53,22 +53,6 @@
           src="./images/Plus-Sign.svg"
           alt="Add Todo"
         />
-        <script defer>
-          function addTodo() {
-            const overlay = document.querySelector(".overlay");
-            const addPopUp = document.querySelector(".addPopUp");
-            overlay.classList.add("active");
-            addPopUp.classList.add("active");
-          }
-          function removeOverlay() {
-            const overlay = document.querySelector(".overlay");
-            const addPopUp = document.querySelector(".addPopUp");
-            const editPopUp = document.querySelector(".editPopUp");
-            overlay.classList.remove("active");
-            addPopUp.classList.remove("active");
-            editPopUp.classList.remove("active");
-          }
-        </script>
       </div>
       <div id="Login">
         <button>Login</button>
@@ -124,6 +108,7 @@
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
             <img
+              class="editTodo"
               src="./images/edit-outline.svg"
               alt="edit"
               onclick="editPopUp()"
@@ -136,6 +121,7 @@
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
             <img
+              class="editTodo"
               src="./images/edit-outline.svg"
               alt="edit"
               onclick="editPopUp()"
@@ -148,6 +134,7 @@
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
             <img
+              class="editTodo"
               src="./images/edit-outline.svg"
               alt="edit"
               onclick="editPopUp()"
@@ -155,14 +142,6 @@
             <img src="./images/close-thick.svg" alt="remove" />
           </div>
         </div>
-        <script defer>
-          function editPopUp() {
-            const overlay = document.querySelector(".overlay");
-            const editPopUp = document.querySelector(".editPopUp");
-            overlay.classList.add("active");
-            editPopUp.classList.add("active");
-          }
-        </script>
       </main>
     </div>
     <div id="waves">

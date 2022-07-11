@@ -1,12 +1,16 @@
-export function addTodo() {
-  const overlay = document.querySelector(".overlay");
+const addButton = document.querySelector("#addTodo");
+const overlay = document.querySelector(".overlay");
+const editButton = document.querySelectorAll(".editTodo");
+
+function addTodo() {
   const addPopUp = document.querySelector(".addPopUp");
   overlay.classList.add("active");
   addPopUp.classList.add("active");
 }
 
-export function removeOverlay() {
-  const overlay = document.querySelector(".overlay");
+addButton.onclick = addTodo;
+
+function removeOverlay() {
   const addPopUp = document.querySelector(".addPopUp");
   const editPopUp = document.querySelector(".editPopUp");
   overlay.classList.remove("active");
@@ -14,9 +18,14 @@ export function removeOverlay() {
   editPopUp.classList.remove("active");
 }
 
-export function editPopUp() {
-  const overlay = document.querySelector(".overlay");
+overlay.onclick = removeOverlay;
+
+function editPopUp() {
   const editPopUp = document.querySelector(".editPopUp");
   overlay.classList.add("active");
   editPopUp.classList.add("active");
 }
+
+editButton.forEach((item) => {
+  item.onclick = editPopUp;
+});

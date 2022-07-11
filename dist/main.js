@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -16,7 +15,8 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _popUp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./popUp.js */ \"./src/popUp.js\");\n\r\nconsole.log(\"Hello World\");\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _popUp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./popUp.js */ \"./src/popUp.js\");\n/* harmony import */ var _popUp_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_popUp_js__WEBPACK_IMPORTED_MODULE_0__);\n\r\nconsole.log(\"Hello World\");\r\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
@@ -24,9 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pop
 /*!**********************!*\
   !*** ./src/popUp.js ***!
   \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addTodo\": () => (/* binding */ addTodo),\n/* harmony export */   \"editPopUp\": () => (/* binding */ editPopUp),\n/* harmony export */   \"removeOverlay\": () => (/* binding */ removeOverlay)\n/* harmony export */ });\nfunction addTodo() {\r\n  const overlay = document.querySelector(\".overlay\");\r\n  const addPopUp = document.querySelector(\".addPopUp\");\r\n  overlay.classList.add(\"active\");\r\n  addPopUp.classList.add(\"active\");\r\n}\r\n\r\nfunction removeOverlay() {\r\n  const overlay = document.querySelector(\".overlay\");\r\n  const addPopUp = document.querySelector(\".addPopUp\");\r\n  const editPopUp = document.querySelector(\".editPopUp\");\r\n  overlay.classList.remove(\"active\");\r\n  addPopUp.classList.remove(\"active\");\r\n  editPopUp.classList.remove(\"active\");\r\n}\r\n\r\nfunction editPopUp() {\r\n  const overlay = document.querySelector(\".overlay\");\r\n  const editPopUp = document.querySelector(\".editPopUp\");\r\n  overlay.classList.add(\"active\");\r\n  editPopUp.classList.add(\"active\");\r\n}\r\n\n\n//# sourceURL=webpack://to-do-list/./src/popUp.js?");
+eval("const addButton = document.querySelector(\"#addTodo\");\r\nconst overlay = document.querySelector(\".overlay\");\r\nconst editButton = document.querySelectorAll(\".editTodo\");\r\n\r\nfunction addTodo() {\r\n  const addPopUp = document.querySelector(\".addPopUp\");\r\n  overlay.classList.add(\"active\");\r\n  addPopUp.classList.add(\"active\");\r\n}\r\n\r\naddButton.onclick = addTodo;\r\n\r\nfunction removeOverlay() {\r\n  const addPopUp = document.querySelector(\".addPopUp\");\r\n  const editPopUp = document.querySelector(\".editPopUp\");\r\n  overlay.classList.remove(\"active\");\r\n  addPopUp.classList.remove(\"active\");\r\n  editPopUp.classList.remove(\"active\");\r\n}\r\n\r\noverlay.onclick = removeOverlay;\r\n\r\nfunction editPopUp() {\r\n  const editPopUp = document.querySelector(\".editPopUp\");\r\n  overlay.classList.add(\"active\");\r\n  editPopUp.classList.add(\"active\");\r\n}\r\n\r\neditButton.forEach((item) => {\r\n  item.onclick = editPopUp;\r\n});\r\n\n\n//# sourceURL=webpack://to-do-list/./src/popUp.js?");
 
 /***/ })
 
@@ -57,6 +57,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
