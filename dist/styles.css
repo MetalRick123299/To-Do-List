@@ -224,17 +224,13 @@ h2 {
   opacity: 67%;
 }
 
-.addPopUp,
-.editPopUp {
+.popUp {
   position: absolute;
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.3s ease-in;
-
-  height: 500px;
-  width: 500px;
 
   z-index: 10;
 }
@@ -244,16 +240,44 @@ h2 {
   transition: all 0.3s ease-in;
 }
 
-.addPopUp.active,
-.editPopUp.active {
+.popUp.active {
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s ease-in;
 }
 
-.addPopUp {
-  background-color: yellow;
+.popUp {
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 33%,
+    rgba(0, 172, 193, 1) 100%
+  );
+
+  max-width: 550px;
+
+  padding: 1rem;
 }
 
-.editPopUp {
-  background-color: blue;
+.popUp h1 {
+  text-align: center;
+
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+.popUp > div {
+  display: flex;
+  gap: 1rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUp > div * {
+  border-radius: 3rem;
+  padding: 1rem;
+  width: 200px;
+}
+
+.popUp button {
+  padding: 1rem 5rem;
 }

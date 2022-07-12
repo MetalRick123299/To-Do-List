@@ -1,31 +1,31 @@
 const addButton = document.querySelector("#addTodo");
 const overlay = document.querySelector(".overlay");
 const editButton = document.querySelectorAll(".editTodo");
+const popUp = document.querySelector(".popUp");
 
-function addTodo() {
-  const addPopUp = document.querySelector(".addPopUp");
+function showPopUp(isEdit) {
+  const popUpHeader = document.querySelector("#popUpHeader");
+  if (isEdit) {
+    popUpHeader.textContent = "Edit Todo";
+    console.log("Edit");
+  } else {
+    popUpHeader.textContent = "Add Todo";
+    console.log("Add");
+  }
+
   overlay.classList.add("active");
-  addPopUp.classList.add("active");
+  popUp.classList.add("active");
 }
 
-addButton.onclick = addTodo;
+addButton.addEventListener("click", showPopUp);
 
-function removeOverlay() {
-  const addPopUp = document.querySelector(".addPopUp");
-  const editPopUp = document.querySelector(".editPopUp");
+function removePopUp() {
   overlay.classList.remove("active");
-  addPopUp.classList.remove("active");
-  editPopUp.classList.remove("active");
+  popUp.classList.remove("active");
 }
 
-overlay.onclick = removeOverlay;
-
-function editPopUp() {
-  const editPopUp = document.querySelector(".editPopUp");
-  overlay.classList.add("active");
-  editPopUp.classList.add("active");
-}
+overlay.addEventListener("click", removePopUp);
 
 editButton.forEach((item) => {
-  item.onclick = editPopUp;
+  item.addEventListener("click", showPopUp);
 });

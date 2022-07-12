@@ -11,13 +11,28 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <div class="overlay" onclick="removeOverlay()"></div>
-    <div class="addPopUp">
-      <!-- Create addPopUp Card -->
-    </div>
-    <div class="editPopUp">
-      <!-- Create editPopUp Card -->
-    </div>
+    <div class="overlay"></div>
+    <form class="popUp">
+      <h1 id="popUpHeader">Add Todo</h1>
+      <div>
+        <input type="text" placeholder="Todo Name" />
+        <input type="datetime-local" placeholder="Due Date" />
+        <select name="project" id="project">
+          <option value="">Select Project</option>
+          <option value="projectName1">Project Name 1</option>
+          <option value="projectName2">Project Name 2</option>
+          <option value="projectName3">Project Name 3</option>
+          <option value="projectName4">Project Name 4</option>
+        </select>
+        <select name="importance" id="importance">
+          <option value="">Select Importance</option>
+          <option value="low">Low</option>
+          <option value="med">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
     <header>
       <div id="logo">
         <!-- Hamburger Icon HTML -->
@@ -47,12 +62,7 @@
         </div>
         <!-- Hamburger Icon HTML -->
         <h1>To-Do-List</h1>
-        <img
-          onclick="addTodo()"
-          id="addTodo"
-          src="./images/Plus-Sign.svg"
-          alt="Add Todo"
-        />
+        <img id="addTodo" src="./images/Plus-Sign.svg" alt="Add Todo" />
       </div>
       <div id="Login">
         <button>Login</button>
@@ -102,17 +112,10 @@
         <div class="content">
           <div class="todo">
             <input type="checkbox" />
-            <h3 class="todoName" onclick="detailPopUp()">
-              Put all item away in theier container
-            </h3>
+            <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img
-              class="editTodo"
-              src="./images/edit-outline.svg"
-              alt="edit"
-              onclick="editPopUp()"
-            />
+            <img class="editTodo" src="./images/edit-outline.svg" alt="edit" />
             <img src="./images/close-thick.svg" alt="remove" />
           </div>
           <div class="todo">
@@ -120,12 +123,7 @@
             <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img
-              class="editTodo"
-              src="./images/edit-outline.svg"
-              alt="edit"
-              onclick="editPopUp()"
-            />
+            <img class="editTodo" src="./images/edit-outline.svg" alt="edit" />
             <img src="./images/close-thick.svg" alt="remove" />
           </div>
           <div class="todo">
@@ -133,12 +131,7 @@
             <h3 class="todoName">Put all item away in theier container</h3>
             <h3 class="dueDate">Today 10:00PM</h3>
             <h3 class="projectName">Coding Project</h3>
-            <img
-              class="editTodo"
-              src="./images/edit-outline.svg"
-              alt="edit"
-              onclick="editPopUp()"
-            />
+            <img class="editTodo" src="./images/edit-outline.svg" alt="edit" />
             <img src="./images/close-thick.svg" alt="remove" />
           </div>
         </div>
