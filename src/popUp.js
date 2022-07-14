@@ -1,23 +1,30 @@
 const addButton = document.querySelector("#addTodo");
 const overlay = document.querySelector(".overlay");
 const editButton = document.querySelectorAll(".editTodo");
-const popUp = document.querySelector(".popUp");
+const popUp = document.querySelector("#popUp");
+export let isEdit = false;
 
-function showPopUp(isEdit) {
-  const popUpHeader = document.querySelector("#popUpHeader");
-  if (isEdit) {
-    popUpHeader.textContent = "Edit Todo";
-    console.log("Edit");
-  } else {
-    popUpHeader.textContent = "Add Todo";
-    console.log("Add");
-  }
-
+function showPopUp() {
   overlay.classList.add("active");
   popUp.classList.add("active");
 }
 
-addButton.addEventListener("click", showPopUp);
+function showAddTodo() {
+  popUpHeader.textContent = "Add Todo";
+  isEdit = false;
+  showPopUp();
+}
+
+function showEditTodo() {
+  popUpHeader.textContent = "Edit Todo";
+  isEdit = true;
+
+  // Add Current Todo Code
+
+  showPopUp();
+}
+
+addButton.addEventListener("click", showAddTodo);
 
 function removePopUp() {
   overlay.classList.remove("active");
@@ -27,5 +34,5 @@ function removePopUp() {
 overlay.addEventListener("click", removePopUp);
 
 editButton.forEach((item) => {
-  item.addEventListener("click", showPopUp);
+  item.addEventListener("click", showEditTodo);
 });

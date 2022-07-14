@@ -224,7 +224,7 @@ h2 {
   opacity: 67%;
 }
 
-.popUp {
+#popUp {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -240,12 +240,12 @@ h2 {
   transition: all 0.3s ease-in;
 }
 
-.popUp.active {
+#popUp.active {
   transform: translate(-50%, -50%) scale(1);
   transition: all 0.3s ease-in;
 }
 
-.popUp {
+#popUp {
   background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 33%,
@@ -257,14 +257,14 @@ h2 {
   padding: 1rem;
 }
 
-.popUp h1 {
+#popUp h1 {
   text-align: center;
 
   border-radius: 3rem;
   padding: 1rem;
 }
 
-.popUp > div {
+#popUp > div {
   display: flex;
   gap: 1rem;
   flex-flow: row wrap;
@@ -272,12 +272,12 @@ h2 {
   align-items: center;
 }
 
-.popUp > div * {
+#popUp > div * {
   border-radius: 3rem;
   padding: 1rem;
   width: 200px;
 }
 
-.popUp button {
+#popUp button {
   padding: 1rem 5rem;
 }

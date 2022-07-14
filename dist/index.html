@@ -12,25 +12,25 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <form class="popUp">
+    <form id="popUp" action="">
       <h1 id="popUpHeader">Add Todo</h1>
       <div>
-        <input type="text" placeholder="Todo Name" />
-        <input type="datetime-local" placeholder="Due Date" />
-        <select name="project" id="project">
+        <input id="todoNameInput" type="text" placeholder="Todo Name" />
+        <input id="dueDateInput" type="datetime-local" placeholder="Due Date" />
+        <select name="project" id="projectInput">
           <option value="">Select Project</option>
           <option value="projectName1">Project Name 1</option>
           <option value="projectName2">Project Name 2</option>
           <option value="projectName3">Project Name 3</option>
           <option value="projectName4">Project Name 4</option>
         </select>
-        <select name="importance" id="importance">
+        <select name="importance" id="importanceInput">
           <option value="">Select Importance</option>
           <option value="low">Low</option>
           <option value="med">Medium</option>
           <option value="high">High</option>
         </select>
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">Submit</button>
       </div>
     </form>
     <header>
